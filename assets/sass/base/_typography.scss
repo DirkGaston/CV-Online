@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;}
+
+.navigation ul li a{
+    text-decoration: none;
+    @include px-to-rem(20);
+    font-weight: $Bold;
+    color: $black;
+
+    @include tablet-view{
+        @include px-to-rem(10)       
+    }
+
+    &:hover{
+        opacity: 50%;
+    }
+}
+.title{
+
+    &__Name{
+        @include px-to-rem(60);
+        text-align: center;
+        font-weight: $Black;
+
+        @include tablet-view{
+            @include px-to-rem(40);
+            text-align: left;
+            padding-left: 2rem
+        }
+    }
+
+    &__Contact{
+        @include px-to-rem(18);
+        font-weight: $Regular;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include tablet-view{
+            text-align: left;
+            padding-left: 2rem;
+        }
+    
+        &--email{
+            text-transform: none;
+            font-weight: $Bold;
+        }
+    }
+
+   &__Introduction{
+        text-align: left;
+        @include px-to-rem(22);
+        font-weight: $Light;
+        @include px-to-rem(30,line-height);
+        color: $darkblue;
+
+        @include tablet-view{
+            @include px-to-rem(20)
+        }
+    }
+}
+
+.content{
+
+    & h2{
+        @include px-to-rem(40);
+        font-weight: $Black;
+    }
+
+    & h3{
+        @include px-to-rem(25);
+        font-weight: $Bold;
+    }
+
+    & h4{
+        @include px-to-rem(18);
+        font-weight: $Regular;
+    }
+
+    & p{
+        @include px-to-rem(22);
+        font-weight: $Light;
+        @include px-to-rem(30, line-height);
+
+        @include tablet-view{
+            @include px-to-rem(20, line-height)
+        }
+    }
+
+    &__Date{
+        @include px-to-rem(20);
+        font-weight: $Regular !important;
+
+        @include tablet-view{
+            font-size: 20px !important;
+        }
+    }
+}
+
+.content__Section--contactform{
+    
+    input::placeholder{
+        opacity: 50%;
+        font-size: 1rem;
+    }
+
+    textarea::placeholder{
+        opacity: 50%;
+        font-family: 'Lato', sans-serif;
+        font-size: 1rem;
+
+    }
+}
+
+
+
